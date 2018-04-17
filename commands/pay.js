@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
   if(!respect[tUser.id]) {
 		respect[tUser.id] = {
 		  role: 'citizen',
-		  respect: 0
+		  respect: 2
 	    };
 	}
  
