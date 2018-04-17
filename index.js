@@ -46,7 +46,7 @@ bot.on("message", async message => {
   if(!respect[message.author.id]) {
 	  respect[message.author.id] = {
 		  role: 'citizen',
-		  respect: 0
+		  respect: 2
 	  };
   }
   
