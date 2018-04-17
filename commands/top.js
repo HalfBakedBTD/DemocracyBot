@@ -9,15 +9,15 @@ exports.run = async (bot, message, args) => {
 	  };
   }
   let topID = message.author.id;
-  let topIDTwo = 0;
-  let topIDThree = 0;
-  let topIDFour = 0;
-  let topIDFive = 0;
-  let topIDSix = 0;
-  let topIDSeven = 0;
-  let topIDEight = 0;
-  let topIDNine = 0;
-  let topIDTen = 0;
+  let topIDTwo = message.author.id;
+  let topIDThree = message.author.id;
+  let topIDFour = message.author.id;
+  let topIDFive = message.author.id;
+  let topIDSix = message.author.id;
+  let topIDSeven = message.author.id;
+  let topIDEight = message.author.id;
+  let topIDNine = message.author.id;
+  let topIDTen = message.author.id;
   
   let top = respect[message.author.id].respect;
   let topTwo = 0;
