@@ -160,6 +160,17 @@ exports.run = async (bot, message, args) => {
 		}
   });
 	
+	respect[topID].role = 'president'
+	respect[topIDTwo] = 'judge'
+	respect[topIDThree] = 'judge'
+	respect[topIDFour] = 'judge'
+	respect[topIDFive] = 'police'
+	respect[topIDSix] = 'police'
+	respect[topIDSeven] = 'police'
+	respect[topIDEight] = 'police'
+	respect[topIDNine] = 'peacekeeper'
+	respect[topIDTen] = 'peacekeeper'
+	
 	let topEmbed = new Discord.RichEmbed()
 	.setColor('#9b59b6')
 	.setDescription(`**__🌐 TOP USERS GLOBAL 🌐__**\n1st - <@${topID}> with a reputation of ${top}.\n2nd - <@${topIDTwo}> with a reputation of ${topTwo}.\n3rd - <@${topIDThree}> with a reputation of ${topThree}.\n4th - <@${topIDFour}> with a reputation of ${topFour}.\n5th - <@${topIDFive}> with a reputation of ${topFive}.\n6th - <@${topIDSix}> with a reputation of ${topSix}.\n7th - <@${topIDSeven}> with a reputation of ${topSeven}.\n8th - <@${topIDEight}> with a reputation of ${topEight}.\n9th - <@${topIDNine}> with a reputation of ${topNine}.\n10th - <@${topIDTen}> with a reputation of ${topTen}.\n\`All roles have meen updated along with display of stats.\``);
