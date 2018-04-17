@@ -6,7 +6,7 @@ exports.run = async (bot, message, args) => {
 	if(!respect[message.author.id]) {
 	    respect[message.author.id] = {
 		  role: 'citizen',
-		  respect: 0
+		  respect: 2
 	    };
     }
 	if (!tUser) {
@@ -23,7 +23,7 @@ exports.run = async (bot, message, args) => {
 	if(!respect[tUser.id]) {
 		respect[tUser.id] = {
 		  role: 'citizen',
-		  respect: 0
+		  respect: 2
 	    };
 	}
 	let workedEmbed = new Discord.RichEmbed()
