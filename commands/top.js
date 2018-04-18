@@ -159,8 +159,13 @@ exports.run = async (bot, message, args) => {
 			topTen = uRep
 		}
   });
-	
-	//respect[topID].role = 'president'
+	let check = bot.users.get(topID)
+	if(!check) {
+		console.log("//+ Top 1: failed")
+	}
+	if (check) {
+    respect[topID].role = 'president'
+	}
 	//respect[topIDTwo] = 'judge'
 	//respect[topIDThree] = 'judge'
 	//respect[topIDFour] = 'judge'
