@@ -37,6 +37,10 @@ exports.run = async (bot, message, args) => {
       };
     }
 		let uRep = respect[user.id].respect;
+	  respect[user.id] = {
+			role: 'citizen',
+			respect: uRep
+		}
 		if (uRep > top) {
 			topIDTen = topIDNine
 			topTen = topNine
