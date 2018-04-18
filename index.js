@@ -55,7 +55,25 @@ bot.on("message", async message => {
   }
   
   if (!message.content.startsWith(`-`)) {
-	respect[message.author.id].respect = respect[message.author.id].respect + 0.025
+	  respect[message.author.id].respect = respect[message.author.id].respect + 0.025
+		if (respect[message.author.id].respect > 25) {
+			if (respect[message.author.id].role !== 'peacekeeper') {
+				respect[message.author.id].role = 'peacekeeper'
+				let promoEmbed = new Discord.RichEmbed()
+  			.setColor("#ecf0f1")
+  			.setDescription(`**${message.author.username}**, have just gained \`peacekeeper\` role. You can now use the \`mute\` command.`)
+  			message.channel.send(promoEmbed)
+			}
+		}
+		if (respect[message.author.id].respect < 25) {
+			if (respect[message.author.id].role === 'peacekeeper') {
+				respect[message.author.id].role = 'citizen'
+				let promoEmbed = new Discord.RichEmbed()
+  			.setColor("#ecf0f1")
+  			.setDescription(`**${message.author.username}**, have just lost \`peacekeeper\` role. You can no longer use the \`mute\` command.`)
+  			message.channel.send(promoEmbed)
+			}
+		}
   }
   
   if (!message.content.startsWith(`-`)) {  
