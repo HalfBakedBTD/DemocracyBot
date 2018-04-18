@@ -97,7 +97,7 @@ bot.on("message", async message => {
 				respect[message.author.id].role = 'judge'
 				let promoEmbed = new Discord.RichEmbed()
   			.setColor("#ecf0f1")
-  			.setDescription(`**${message.author.username}**, have just gained \`police\` role. You can now use the \`ban\` command.`)
+  			.setDescription(`**${message.author.username}**, have just gained \`judge\` role. You can now use the \`ban\` command.`)
   			message.channel.send(promoEmbed)
 			}
 		}
