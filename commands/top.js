@@ -206,7 +206,7 @@ exports.run = async (bot, message, args) => {
 	
 	let topEmbed = new Discord.RichEmbed()
 	.setColor('#9b59b6')
-	.setDescription(`**__🌐 TOP USERS GLOBAL 🌐__**\n1st - <@${topID}> with a reputation of ${top}.\n2nd - <@${topIDTwo}> with a reputation of ${topTwo}.\n3rd - <@${topIDThree}> with a reputation of ${topThree}.\n4th - <@${topIDFour}> with a reputation of ${topFour}.\n5th - <@${topIDFive}> with a reputation of ${topFive}.\n6th - <@${topIDSix}> with a reputation of ${topSix}.\n7th - <@${topIDSeven}> with a reputation of ${topSeven}.\n8th - <@${topIDEight}> with a reputation of ${topEight}.\n9th - <@${topIDNine}> with a reputation of ${topNine}.\n10th - <@${topIDTen}> with a reputation of ${topTen}.\n\`All roles have meen updated along with display of stats.\``);
+	.setDescription(`**__Updated Roles:__**\n**President** - <@${topID}>.\n**Judge** - <@${topIDTwo}>, <@${topIDThree}>, and <@${topIDFour}>.\n**Police** - <@${topIDFive}>, <@${topIDSix}>, <@${topIDSeven}>, and <@${topIDEight}>.\n**Peacekeeper** - <@${topIDNine}> and <@${topIDTen}>.`);
 	message.channel.send(topEmbed);
 }
 
