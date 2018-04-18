@@ -161,20 +161,74 @@ exports.run = async (bot, message, args) => {
   });
 	let check = bot.users.get(topID)
 	if(!check) {
-		console.log("//+ Top 1: failed")
+		console.log("//+ Top 1: failed.")
 	}
 	if (check) {
     respect[topID].role = 'president'
 	}
-	//respect[topIDTwo] = 'judge'
-	//respect[topIDThree] = 'judge'
-	//respect[topIDFour] = 'judge'
-	//respect[topIDFive] = 'police'
-	//respect[topIDSix] = 'police'
-	//respect[topIDSeven] = 'police'
-	//respect[topIDEight] = 'police'
-	//respect[topIDNine] = 'peacekeeper'
-	//respect[topIDTen] = 'peacekeeper'
+	let checkTwo = bot.users.get(topID)
+	if(!checkTwo) {
+		console.log("//+ Top 2: failed.")
+	}
+	if (checkTwo) {
+	  respect[topIDTwo] = 'judge'
+	}
+	let checkThree = bot.users.get(topID)
+	if(!checkThree) {
+		console.log("//+ Top 3: failed.")
+	}
+	if (checkThree) {
+	  respect[topIDThree] = 'judge'
+	}
+	let checkFour = bot.users.get(topID)
+	if(!checkFour) {
+		console.log("//+ Top 4: failed.")
+	}
+	let checkFive = bot.users.get(topID)
+	if(!checkFive) {
+		console.log("//+ Top 5: failed.")
+	}
+	if (checkFive) {
+		respect[topIDFive] = 'police'
+	}
+	if (checkFour) {
+	  respect[topIDFour] = 'judge'
+	}
+	let checkSix = bot.users.get(topID)
+	if(!checkSix) {
+		console.log("//+ Top 6: failed.")
+	}
+	if (checkSix) {
+	  respect[topIDSix] = 'police'
+	}
+	let checkSeven = bot.users.get(topID)
+	if(!checkSeven) {
+		console.log("//+ Top 7: failed.")
+	}
+	if (checkSeven) {
+	  respect[topIDSeven] = 'police'
+	}
+	let checkEight = bot.users.get(topID)
+	if(!checkEight) {
+		console.log("//+ Top 8: failed.")
+	}
+	if (checkEight) {
+	  respect[topIDEight] = 'police'
+	}
+	let checkNine = bot.users.get(topID)
+	if(!checkNine) {
+		console.log("//+ Top 9: failed.")
+	}
+	if (checkNine) {
+	  respect[topIDNine] = 'peacekeeper'
+	}
+	let checkTen = bot.users.get(topID)
+	if(!checkTen) {
+		console.log("//+ Top 1: failed")
+	}
+	if (checkTen) {
+	  respect[topIDTen] = 'peacekeeper'
+	}
 	
 	let topEmbed = new Discord.RichEmbed()
 	.setColor('#9b59b6')
