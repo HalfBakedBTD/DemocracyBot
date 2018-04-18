@@ -160,16 +160,16 @@ exports.run = async (bot, message, args) => {
 		}
   });
 	
-	respect[topID].role = 'president'
-	respect[topIDTwo] = 'judge'
-	respect[topIDThree] = 'judge'
-	respect[topIDFour] = 'judge'
-	respect[topIDFive] = 'police'
-	respect[topIDSix] = 'police'
-	respect[topIDSeven] = 'police'
-	respect[topIDEight] = 'police'
-	respect[topIDNine] = 'peacekeeper'
-	respect[topIDTen] = 'peacekeeper'
+	//respect[topID].role = 'president'
+	//respect[topIDTwo] = 'judge'
+	//respect[topIDThree] = 'judge'
+	//respect[topIDFour] = 'judge'
+	//respect[topIDFive] = 'police'
+	//respect[topIDSix] = 'police'
+	//respect[topIDSeven] = 'police'
+	//respect[topIDEight] = 'police'
+	//respect[topIDNine] = 'peacekeeper'
+	//respect[topIDTen] = 'peacekeeper'
 	
 	let topEmbed = new Discord.RichEmbed()
 	.setColor('#9b59b6')
