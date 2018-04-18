@@ -14,7 +14,13 @@ module.exports.run = async (bot, message, args) => {
 		respect[tUser.id] = {
 		  role: 'citizen',
 		  respect: 2
-	    };
+	  };
+	}
+	if(!respect[message.author.id]) {
+		respect[message.author.id] = {
+		  role: 'citizen',
+		  respect: 2
+	  };
 	}
  
   let resEmbed = new Discord.RichEmbed()
@@ -24,11 +30,15 @@ module.exports.run = async (bot, message, args) => {
   
   let resDMEmbed = new Discord.RichEmbed()
   .setColor("#9b59b6")
-  .setDescription(`**${message.author.username}** has just paid you respects.`)
+  .setDescription(`**${message.author.username}** has just paid you respects. [Respect: +5]`)
   tUser.send(resDMEmbed)
+	
+	let resGEmbed = new Discord.RichEmbed()
+  .setColor("#c7ecee")
+  .setDescription(`Thank you for paying respects to ${tUser}. [Respect: +1.5]`)
+  message.author.send(resGEmbed)
   
-  
-  
+  respect[message.author.id].respect = respect[message.author.id].respect + 1.5
   respect[tUser.id].respect = respect[tUser.id].respect + 5
   
   claim_talked_users.add(message.author.id);
@@ -38,5 +48,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "pay"
+  name: "respect"
 }
