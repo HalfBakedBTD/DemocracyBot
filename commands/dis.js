@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
 	let resGEmbed = new Discord.RichEmbed()
   .setColor("#c7ecee")
   .setDescription(`You have successfully disgraced ${tUser}.`)
-  message.author.send(resGEmbed)
+  message.channel.send(resGEmbed)
   
   respect[message.author.id].respect = respect[message.author.id].respect - 5
   respect[tUser.id].respect = respect[tUser.id].respect - 20
