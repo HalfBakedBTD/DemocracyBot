@@ -23,23 +23,20 @@ module.exports.run = async (bot, message, args) => {
 	  };
 	}
  
-  let resEmbed = new Discord.RichEmbed()
-  .setColor("#9b59b6")
-  .setDescription(`**${message.author.username}**, you have just disgraced ${tUser}.`)
-  message.channel.send(resEmbed)
-  
-  let resDMEmbed = new Discord.RichEmbed()
-  .setColor("#9b59b6")
-  .setDescription(`**${message.author.username}** has just disgraced you. [Respect: -4]`)
-  tUser.send(resDMEmbed)
+	bot.channels.filter(c => c.name === `rep-logs`).forEach(channel => {
+  	let resEmbed = new Discord.RichEmbed()
+  	.setColor("#9b59b6")
+  	.setDescription(`**__Disgrace:__**\n${tUser}: -20\n<@${message.author.id}>: -5`)
+  	channel.send(resEmbed)
+	});
 	
 	let resGEmbed = new Discord.RichEmbed()
   .setColor("#c7ecee")
-  .setDescription(`You have just disgraced ${tUser}. [Respect: -2]`)
+  .setDescription(`You have successfully disgraced ${tUser}.`)
   message.author.send(resGEmbed)
   
-  respect[message.author.id].respect = respect[message.author.id].respect - 2
-  respect[tUser.id].respect = respect[tUser.id].respect - 4
+  respect[message.author.id].respect = respect[message.author.id].respect - 5
+  respect[tUser.id].respect = respect[tUser.id].respect - 20
   
   claim_talked_users.add(message.author.id);
     setTimeout(() => {
