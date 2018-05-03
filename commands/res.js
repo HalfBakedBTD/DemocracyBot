@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   if (claim_talked_users.has(message.author.id)) return message.reply("you can only pay someone your respects every 2 hours.");
   let tUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
   if(!tUser) return message.reply(`please tag someone you wish to pay respects to. (Example: \`-dis <user>\`)`)
-  if(tUser.id === message.author.id) return message.reply(`you **__can't__** pay respects to yourself...`)
+  if(tUser.id === message.author.id) return message.reply(`you **__can't__** disrespect yourself...`)
   if(!respect[tUser.id]) {
 		respect[tUser.id] = {
 		  role: 'citizen',
