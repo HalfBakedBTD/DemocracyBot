@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
 	bot.channels.filter(c => c.name === `rep-logs`).forEach(channel => {
   	let resEmbed = new Discord.RichEmbed()
   	.setColor("#9b59b6")
-  	.setDescription(`**__Respected:__**\n${tUser}: +25\n<@${message.author.id}>**: +5`)
+  	.setDescription(`**__Respected:__**\n${tUser}: +25\n<@${message.author.id}>: +5`)
   	channel.send(resEmbed)
 	});
   
