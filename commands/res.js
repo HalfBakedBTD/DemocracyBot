@@ -23,23 +23,21 @@ module.exports.run = async (bot, message, args) => {
 	  };
 	}
  
-  let resEmbed = new Discord.RichEmbed()
-  .setColor("#9b59b6")
-  .setDescription(`**${message.author.username}**, you have just paid respects to ${tUser}.`)
-  message.channel.send(resEmbed)
+	bot.channels.filter(c => c.name === `rep-logs`).forEach(channel => {
+  	let resEmbed = new Discord.RichEmbed()
+  	.setColor("#9b59b6")
+  	.setDescription(`**__Respected:__**\n${tUser}: +25\n<@${message.author.id}>**: +5`)
+  	channel.send(resEmbed)
+	});
   
-  let resDMEmbed = new Discord.RichEmbed()
-  .setColor("#9b59b6")
-  .setDescription(`**${message.author.username}** has just paid you respects. [Respect: +5]`)
-  tUser.send(resDMEmbed)
 	
 	let resGEmbed = new Discord.RichEmbed()
   .setColor("#c7ecee")
-  .setDescription(`Thank you for paying respects to ${tUser}. [Respect: +1.5]`)
-  message.author.send(resGEmbed)
+  .setDescription(`Thank you for respecting ${tUser}.`)
+  message.channel.send(resGEmbed)
   
-  respect[message.author.id].respect = respect[message.author.id].respect + 1.5
-  respect[tUser.id].respect = respect[tUser.id].respect + 5
+  respect[message.author.id].respect = respect[message.author.id].respect + 5
+  respect[tUser.id].respect = respect[tUser.id].respect + 25
   
   claim_talked_users.add(message.author.id);
     setTimeout(() => {
@@ -48,5 +46,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "respect"
+  name: "res"
 }
