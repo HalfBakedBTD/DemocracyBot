@@ -55,7 +55,7 @@ bot.on("message", async message => {
   }
   
   if (!message.content.startsWith(`-`)) {
-	  respect[message.author.id].respect = respect[message.author.id].respect + 0.05
+	  respect[message.author.id].respect = respect[message.author.id].respect + 1
   }
   
   if (!message.content.startsWith(`-`)) {  
